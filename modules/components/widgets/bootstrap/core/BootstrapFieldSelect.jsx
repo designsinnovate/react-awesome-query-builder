@@ -90,15 +90,14 @@ export default ({ items, setField, selectedKey, readonly, placeholder }) => {
       toggle={() => setIsOpen(!isOpen)}
     >
       <DropdownToggle
-        tag={"button"}
         className={"form-select"}
         style={stylesDropdownWrapper}
         color={"transparent"}
       >
         {hasValue ? renderValue(selectedKey) : <span>&nbsp;</span>}
       </DropdownToggle>
-      <DropdownMenu 
-        container="body" 
+      <DropdownMenu
+        container="body"
         style={stylesDropdownMenuWrapper}
       >
         {!hasValue && <DropdownItem key={"body"} disabled value={""}></DropdownItem>}

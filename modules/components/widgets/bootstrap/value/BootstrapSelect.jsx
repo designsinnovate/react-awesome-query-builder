@@ -41,8 +41,8 @@ export default ({
     return getListValueTitle(selectedValue);
   };
 
-  const getListValueTitle = (selectedValue) => 
-    mapListValues(listValues, ({title, value}) => 
+  const getListValueTitle = (selectedValue) =>
+    mapListValues(listValues, ({title, value}) =>
       (value === selectedValue ? title : null)
     )
       .filter(v => v !== null)
@@ -69,7 +69,6 @@ export default ({
       toggle={() => setIsOpen(!isOpen)}
     >
       <DropdownToggle
-        tag={"button"}
         className={"form-select"}
         style={stylesDropdownWrapper}
         color={"transparent"}
